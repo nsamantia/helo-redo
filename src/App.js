@@ -1,12 +1,15 @@
 import './App.css';
-import Auth from './components/Auth/Auth'
-import routes from '.src/routes'
+import {withRouter} from 'react-router-dom'
+import Nav from './components/Nav/Nav'
+import routes from './routes'
 
 
-function App() {
+
+function App(props) {
   return (
     <div className="App">
-      <Auth />
+      
+      {props.location.pathname === '/' ? null : <Nav />}
       
       {routes}
       
@@ -14,4 +17,4 @@ function App() {
   );
 }
 
-export default App;
+export default withRouter(App);
