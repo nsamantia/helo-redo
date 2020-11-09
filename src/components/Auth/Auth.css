@@ -1,0 +1,28 @@
+.auth-container{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 225px;
+    margin-left: 100px;
+    margin-right: 100px;
+    flex-direction: column;
+    background-color: gainsboro;
+    padding: 50px;
+    
+    
+    
+}
+
+input{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 150px;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+

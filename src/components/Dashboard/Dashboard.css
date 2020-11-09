@@ -1,0 +1,21 @@
+.dashboard-container{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 75px;
+
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 75px;
+}

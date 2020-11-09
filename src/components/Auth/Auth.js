@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import { loginUser } from '../../ducks/reducer'
 import { connect } from 'react-redux'
+import './Auth.css'
 
 const Auth = (props) => {
 
@@ -26,12 +27,14 @@ const Auth = (props) => {
 
       
     return(
-        <div>
+        <div className="auth-container">
            <input type="text" name="username" placeholder="username" onChange={e => setUsername(e.target.value)}/>
            <input type="text" name="password" placeholder="password" onChange={e => setPassword(e.target.value)}/>
         
-            <button onClick={() => login()}>Login</button>
-           <button onClick={() => register()}>Register</button>
+            <div className="button-container">
+                <button onClick={() => login()}>Login</button>
+                <button onClick={() => register()}>Register</button>
+            </div>
         
         </div>
 

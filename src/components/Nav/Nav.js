@@ -1,20 +1,20 @@
 import { connect } from 'react-redux'
 import {Link} from 'react-router-dom'
-import { loginUser } from '../../ducks/reducer'
+import { logoutUser } from '../../ducks/reducer'
 
-const Nav = () =>{
+const Nav = (props) =>{
 
 
     return(
         <div>
-            
+            {props.user.username}
             <Link to='/Dashbaord'><button>Home</button></Link>
             <Link to='/Form'><button>New Post</button></Link>
-            <Link to='/'><button>Logout</button></Link>
+            <Link to='/'><button onClick={props.logoutUser}>Logout</button></Link>
 
         </div>
     )
 }
 
-
-export default connect(null, {loginUser})(Nav)
+const mapStateToProps = reduxState => reduxState
+export default connect(mapStateToProps, {logoutUser})(Nav)
