@@ -20,6 +20,8 @@ app.use(
 
     //auth endpoints
     app.post(`/api/auth/register`, authCtrl.register)
+    app.post(`/api/auth/login`, authCtrl.login)
+    app.get('/api/auth/getUser', authCtrl.getUser)
 
 
     massive({

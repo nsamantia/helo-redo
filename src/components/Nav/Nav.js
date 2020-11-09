@@ -1,4 +1,6 @@
+import { connect } from 'react-redux'
 import {Link} from 'react-router-dom'
+import { loginUser } from '../../ducks/reducer'
 
 const Nav = () =>{
 
@@ -14,4 +16,5 @@ const Nav = () =>{
     )
 }
 
-export default Nav
+
+export default connect(null, {loginUser})(Nav)
