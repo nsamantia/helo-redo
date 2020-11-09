@@ -10,6 +10,8 @@ const [search, setSearch] = useState('')
     return(
         <div className="dashboard-container">
             <input type="text" name="search"/>
+            <input type="checkbox" id="myPosts"/>
+            <label>My Posts</label>
             <div className="button-container">
                 <button>Search</button>
                 <button>Reset</button>
