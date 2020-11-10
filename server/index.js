@@ -25,7 +25,7 @@ app.use(
     app.get('/api/auth/getUser', authCtrl.getUser)
 
     //post endpoints
-    app.get('/api/posts/:id', postCtrl.getPosts)
+    app.get('/api/posts/:userid', postCtrl.getPosts)
 
 
     massive({
