@@ -6,6 +6,7 @@ const Dashboard = () => {
 
 const [posts, setPosts] = useState([])
 const [search, setSearch] = useState('')
+const [userPosts, setUserPosts] = useState(false)
 
     return(
         <div className="dashboard-container">

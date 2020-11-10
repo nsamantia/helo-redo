@@ -5,6 +5,7 @@ const massive = require('massive')
 const app = express()
 
 const authCtrl = require('./authController')
+const postCtrl = require('./postController')
 
 const {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env
 
@@ -22,6 +23,9 @@ app.use(
     app.post(`/api/auth/register`, authCtrl.register)
     app.post(`/api/auth/login`, authCtrl.login)
     app.get('/api/auth/getUser', authCtrl.getUser)
+
+    //post endpoints
+    app.get('/api/posts/:id', postCtrl.getPosts)
 
 
     massive({
