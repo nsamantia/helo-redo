@@ -5,7 +5,7 @@ const DashboardMap = (props) => {
 
     return(
         <div>
-           <p>hello from dashboardmap</p>
+           
             <p>{props.title}</p>
             <p>{props.username}</p>
             

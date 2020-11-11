@@ -12,20 +12,24 @@ const Dashboard = (props) => {
     const [userPosts, setUserPosts] = useState(false)
 
     useEffect(() => {
-        axios.get(`/api/posts/${props.user.id}?search=${search}&userPosts=${userPosts}`)
-        .then(res => setPosts(res.data))
+        getPosts()
     }, [])
 
+
+    const getPosts = () => {
+        axios.get(`/api/posts/${props.user.id}?search=${search}&userPosts=${userPosts}`)
+        .then(res => setPosts(res.data))
+    }
 
 
 
     return(
         <div className="dashboard-container">
-            <input type="text" name="search"/>
-            <input type="checkbox" id="myPosts"/>
-            <label>My Posts</label>
+            <input type="text" name="search" onChange={e => setSearch(e.target.value)}/>
+            <input type="checkbox" id="myPosts" onChange={(e)=>setUserPosts(!userPosts)} />
+            <label >My Posts</label>
             <div className="button-container">
-                <button>Search</button>
+                <button onClick={()=>getPosts()}>Search</button>
                 <button>Reset</button>
             </div>
 
