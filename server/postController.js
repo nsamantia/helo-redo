@@ -23,5 +23,13 @@ module.exports ={
             return res.status(200).send(allUserPosts)
         }
         
+    },
+
+    getSinglePost: async(req, res) => {
+        const db = req.app.get('db')
+        const {postid} = req.params
+
+        const [getSinglePost] = await db.get_single_post(postid)
+        res.status(200).send(getSinglePost)
     }
 }
