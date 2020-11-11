@@ -8,8 +8,8 @@ const Nav = (props) =>{
     return(
         <div>
             {props.user.username}
-            <Link to='/Dashbaord'><button>Home</button></Link>
-            <Link to='/Form'><button>New Post</button></Link>
+            <Link to='/dashboard'><button>Home</button></Link>
+            <Link to='/form'><button>New Post</button></Link>
             <Link to='/'><button onClick={props.logoutUser}>Logout</button></Link>
 
         </div>

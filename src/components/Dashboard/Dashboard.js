@@ -40,6 +40,7 @@ const Dashboard = (props) => {
                         key={e.id}
                         title={e.title}
                         username={e.username}
+                        id={e.id}
                         
                         
                     />
