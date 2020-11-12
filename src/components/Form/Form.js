@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import {connect} from 'react-redux'
 
+
 const Form = (props) =>{
 
     const [title, setTitle] = useState('')
@@ -16,6 +17,7 @@ const Form = (props) =>{
         <div>
             
             <input type='text' name ='title' placeholder='title' onChange={(e)=> setTitle(e.target.value)}/>
+            <img src={image} />
             <input type='text' name ='image' placeholder='image'onChange={(e)=> setImage(e.target.value)}/>
             <input type='text' name ='content' placeholder='content' onChange={(e)=>setContent(e.target.value)}/>
             <button onClick ={() => newPost()}>Post</button>
