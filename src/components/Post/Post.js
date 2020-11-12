@@ -15,7 +15,7 @@ const Post = (props) => {
     return(
         <div>
            <p>{info.title}</p>
-            <p>{info.img}</p>
+            <p><img src={info.img}/></p>
             <p>{info.content}</p>
             
         </div>

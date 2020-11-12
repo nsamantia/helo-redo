@@ -27,6 +27,7 @@ app.use(
     //post endpoints
     app.get(`/api/posts/:userid`, postCtrl.getPosts)
     app.get(`/api/post/:postid`, postCtrl.getSinglePost)
+    app.post(`/api/post/:userid`, postCtrl.newPost)
 
 
     massive({
