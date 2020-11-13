@@ -1,8 +1,10 @@
-import axios from 'axios'
 import React, {useState, useEffect} from 'react'
+import axios from 'axios'
+import Post from '../Post/Post'
 import {connect} from 'react-redux'
 import './Dashboard.css'
 import DashboardMap from './DashboardMap'
+import { withRouter } from 'react-router-dom'
 
 
 const Dashboard = (props) => {
@@ -21,10 +23,13 @@ const Dashboard = (props) => {
         .then(res => setPosts(res.data))
     }
 
+    
+
 
 
     return(
         <div className="dashboard-container">
+            
             <input type="text" name="search" onChange={e => setSearch(e.target.value)}/>
             <input type="checkbox" id="myPosts" onChange={(e)=>setUserPosts(!userPosts)} />
             <label >My Posts</label>
@@ -52,4 +57,4 @@ const Dashboard = (props) => {
 
 const mapStateToProps = reduxState => reduxState
 
-export default connect(mapStateToProps)(Dashboard)
+export default connect(mapStateToProps, withRouter)(Dashboard)

@@ -12,6 +12,12 @@ const Post = (props) => {
         axios.get(`/api/post/${props.match.params.postid}`).then(res => setInfo(res.data))
     }, [])
 
+    const deletePost = () => {
+        axios.delete(`/api/post/delete/${props.match.params.postid}`)
+        .then(res => {
+            props.history.push('/dashboard')
+        })
+    }
  
    
 
@@ -21,7 +27,7 @@ const Post = (props) => {
             <p><img src={info.img}/></p>
             <p>{info.content}</p>
 
-            {( info.author_id === props.user.id) ? (<div><button>Delete</button></div>) : (null)
+            {( info.author_id === props.user.id) ? (<div><button onClick={()=>deletePost()}>Delete</button></div>) : (null)
             
 
 
