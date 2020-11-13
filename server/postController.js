@@ -40,5 +40,13 @@ module.exports ={
 
         const newPost = await db.new_post(userid, title, image, content)
         res.status(200).send(newPost)
+    },
+
+    deletePost: async(req, res) => {
+        const db = req.app.get('db')
+        const {postid} = req.params
+        
+        const deletePost = await db.delete_post(postid)
+        res.status(200).send(deletePost)
     }
 }

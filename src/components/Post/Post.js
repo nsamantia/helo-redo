@@ -12,14 +12,7 @@ const Post = (props) => {
         axios.get(`/api/post/${props.match.params.postid}`).then(res => setInfo(res.data))
     }, [])
 
-    // const del = () => {
-    //     if (props.user.id === info.author_id){
-
-    //         return(
-    //             <button>Delete</button>
-    //         )
-    //     }
-    // }
+ 
    
 
     return(

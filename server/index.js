@@ -28,6 +28,7 @@ app.use(
     app.get(`/api/posts/:userid`, postCtrl.getPosts)
     app.get(`/api/post/:postid`, postCtrl.getSinglePost)
     app.post(`/api/post/:userid`, postCtrl.newPost)
+    app.delete(`/api/post/delete/:postid`, postCtrl.deletePost)
 
 
     massive({
