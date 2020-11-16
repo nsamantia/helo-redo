@@ -23,12 +23,15 @@ app.use(
     app.post(`/api/auth/register`, authCtrl.register)
     app.post(`/api/auth/login`, authCtrl.login)
     app.get('/api/auth/getUser', authCtrl.getUser)
+    app.post('/api/auth/logout', authCtrl.logout) 
+    
 
     //post endpoints
     app.get(`/api/posts/:userid`, postCtrl.getPosts)
     app.get(`/api/post/:postid`, postCtrl.getSinglePost)
     app.post(`/api/post/:userid`, postCtrl.newPost)
     app.delete(`/api/post/delete/:postid`, postCtrl.deletePost)
+
 
 
     massive({

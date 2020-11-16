@@ -23,7 +23,10 @@ const Dashboard = (props) => {
         .then(res => setPosts(res.data))
     }
 
-    
+    const deletePost = () => {
+        axios.delete(`/api/post/delete/${props.match.params.postid}`)
+        .then(res => setPosts(res.data))
+    }
 
 
 
